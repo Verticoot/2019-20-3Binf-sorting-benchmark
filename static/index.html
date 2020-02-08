@@ -8,4 +8,15 @@
 <body>
     ciao
 </body>
+<script src="jquery-3.4.1.mins.js"></script>
+<script>
+    $.getJSON("data").done(createItems);
+    function createItems(jsonData)
+    {
+        for(book of jsonData)
+        {
+            $("ul").append(`<li>${book.author}</li>`);
+        }
+    }
+</script>
 </html>

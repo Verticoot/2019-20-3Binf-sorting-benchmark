@@ -14,4 +14,4 @@ def jquery():
 
 @app.route("/data")
 def data():
-    return json.dumps([book.__dict__() for book in book_list])
+    return json.dumps([book.__dict__ for book in book_list])
