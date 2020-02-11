@@ -8,9 +8,9 @@ app = Flask("Book-Sorting")
 def index():
     return app.send_static_file("index.html")
 
-@app.route("/jquery-3.4.1.mins.js")
+@app.route("/jquery-3.4.1.min.js")
 def jquery():
-    return app.send_static_file("/jquery-3.4.1.mins.js")
+    return app.send_static_file("jquery-3.4.1.min.js")
 
 @app.route("/data")
 def data():
