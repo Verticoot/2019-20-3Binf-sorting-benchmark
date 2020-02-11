@@ -14,9 +14,12 @@
     $.getJSON("/data").done(createItems);
     function createItems(jsonData) {
         for (book of jsonData) {
-            $("ul").append(`<li>${book.author}</li>`);
+            $("ul").append(`<li onclick="showCode()">${book.author}</li>`);
         }
     }
-
+    function showCode() {
+        console.log("inside showCode");
+        alert("La chiave per aprire l' armadietto è AABAA");
+    }
 </script>
 </html>
