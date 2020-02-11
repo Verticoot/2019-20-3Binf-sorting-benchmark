@@ -13,6 +13,7 @@
 <script>
     $.getJSON("/data").done(createItems);
     function createItems(jsonData) {
+        console.log(jsonData);
         for (book of jsonData) {
             $("ul").append(`<li onclick="showCode()">${book.author}</li>`);
         }
